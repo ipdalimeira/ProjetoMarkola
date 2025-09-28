@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeleShow - Inscrição Confirmada</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/faveicon.jpg">
+</head>
+<body>
+    <div class="container">
+        <!-- CABEÇALHO -->
+        <header class="header">
+            <h1>SABADÃO DE PRÊMIOS</h1>
+            <h2>OFICIAL DO MARKOLA</h2>
+            <p class="subtitulo"> • AO VIVO • SHOW DE PRÊMIOS PARA VOCÊ!</p>
+            <p class="subtitulo">Rafael, Bem-vindo ao Markola Show</p>
+            <p class="subtitulo">Você já está participando. Boa sorte!</p>
+        </header>
+
+        <!-- COLE A LINHA DO BANNER AQUI -->
+    <div class="banner"><img src="img/banner.jpg" alt="Banner Markola" class="banner-img"></div>
+
+        <!-- SEUS DADOS -->
+        <section class="dados-usuario">
+            <h2>Seus Dados</h2>
+            
+            <div class="dado-item">
+    <label>Nome</label>
+    <p id="nomeUsuario"></p>
+</div>
+
+<div class="dado-item">
+    <label>WhatsApp</label>
+    <p id="whatsappUsuario"></p>
+</div>
+
+<div class="dado-item">
+    <label>ID BetBoom</label>
+    <p id="idUsuario"></p>
+</div>
+
+
+            
+            <p class="alterar-dados">Não é Rafael? <a href="index.html">Clique aqui para alterar</a></p>
+        </section>
+
+        <!-- STATUS DE INSCRIÇÃO -->
+        <section class="status-inscricao">
+            <div class="confirmacao">
+                <h3>✅ INSCRIÇÃO CONFIRMADA!</h3>
+                <p>Você está na lista de participantes e pode ser sorteado a qualquer momento durante a live.</p>
+            </div>
+        </section>
+
+        <!-- INSTRUÇÕES -->
+        <section class="instrucoes">
+            <div class="alerta">
+                <h4>⚠️ MANTENHA ESTA PÁGINA ABERTA!</h4>
+                <p>Se for sorteado, você será notificado por aqui.</p>
+            </div>
+        </section>
+
+        <!-- BOTÃO ASSISTIR LIVE -->
+        <section class="acao">
+            <button class="btn-live" onclick="assistirLive()">📺 ASSISTIR À LIVE AGORA!</button>
+        </section>
+    </div>
+
+    <script src="script-confirmacao.js"></script>
+</body>
+</html>

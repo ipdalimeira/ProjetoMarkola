@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeleShow - Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/faveicon.jpg">
+</head>
+<body>
+    <div class="container">
+        <!-- CABEÇALHO -->
+        <header class="header">
+            <h1>SABADÃO DE PRÊMIOS</h1>
+            <h1>OFICIAL DO MARKOLA</h1>
+            <p class="subtitulo">• AO VIVO • SHOW DE PRÊMIOS PARA VOCÊ!</p>
+            <p class="subtitulo">Cadastre-se e participe do sorteio!</p>
+        </header>
+
+        <!-- BANNER -->
+        <div class="banner">
+            <img src="img/banner.jpg" alt="Banner Markola" class="banner-img">
+        </div>
+
+        <!-- FORMULÁRIO DE CADASTRO -->
+        <section class="formulario-cadastro">
+            <h2>📝 Faça Seu Cadastro</h2>
+            
+            <form id="formCadastro">
+                <div class="campo-form">
+                    <label for="nomeCompleto">Nome Completo:</label>
+                    <input type="text" id="nomeCompleto" name="nomeCompleto" placeholder="Digite seu nome completo" required>
+                </div>
+                
+                <div class="campo-form">
+                    <label for="whatsapp">WhatsApp:</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 99999-9999" required>
+                </div>
+                
+                <div class="campo-form">
+                    <label for="idBetboom">ID BetBoom:</label>
+                    <input type="text" id="idBetboom" name="idBetboom" placeholder="00-000000" required>
+                </div>
+                
+                <button type="submit" class="btn-participar" id="btnParticipar">
+                    🎯 Participar AGORA
+                </button>
+                
+                <div id="loading" class="loading" style="display: none;">
+                    <p>⏳ Enviando dados... Aguarde!</p>
+                </div>
+            </form>
+            
+            <p class="info-cadastro">Ao cadastrar, você concorda com os termos do sorteio.</p>
+        </section>
+    </div>
+
+    <script src="script-cadastro.js"></script>
+</body>
+</html>

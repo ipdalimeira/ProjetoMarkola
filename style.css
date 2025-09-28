@@ -1,0 +1,306 @@
+/* =========================
+   VARIÁVEIS PRINCIPAIS
+========================= */
+:root {
+    --yellow: #ffcc00;
+    --red: #cc0000;
+    --red-dark: #990000;
+    --bg-dark: #111111;
+    --bg-input: #222222;
+    --text-light: #fff;
+    --text-muted: #ccc;
+    --success: #28a745;
+    --alert-bg: #3a2a00;
+}
+
+/* =========================
+   RESET E BODY
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('img/sr1000.jpg') center/cover no-repeat;
+    color: var(--text-light);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+@keyframes glowBorder {
+    from { box-shadow: 0 0 10px rgba(255, 204, 0, 0.5); }
+    to { box-shadow: 0 0 30px rgba(255, 204, 0, 1); }
+}
+
+@keyframes pulseCombined {
+    0%   { transform: scale(1); box-shadow: 0 0 5px var(--yellow); }
+    50%  { transform: scale(1.05); box-shadow: 0 0 20px var(--yellow); }
+    100% { transform: scale(1); box-shadow: 0 0 5px var(--yellow); }
+}
+
+@keyframes pulseLive {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* =========================
+   CONTAINER PRINCIPAL
+========================= */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--bg-dark);
+    border-radius: 10px;
+    border: 5px solid var(--yellow);
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.6);
+    animation: glowBorder 2s infinite alternate;
+}
+
+/* Bordas animadas específicas para páginas que precisam */
+.glow-border {
+    border: 5px solid var(--yellow);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.6);
+    animation: glowBorder 2s infinite alternate;
+}
+
+/* =========================
+   BANNER
+========================= */
+.banner {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+    border-bottom: 5px solid var(--yellow);
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.6);
+    animation: glowBorder 2s infinite alternate;
+}
+
+.banner-img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+.header {
+    background: var(--red);
+    color: var(--text-light);
+    padding: 25px 20px;
+    text-align: center;
+    border: 5px solid var(--yellow);
+    border-radius: 10px;
+}
+
+.header h1 { font-size: 26px; margin-bottom: 10px; }
+.header h2 { 
+    font-size: 22px; 
+    color: var(--yellow); 
+    margin: 10px 0; 
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+.formulario-cadastro {
+    padding: 20px;
+}
+
+.formulario-cadastro h2 {
+    color: var(--yellow);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.campo-form {
+    margin-bottom: 15px;
+}
+
+.campo-form label {
+    display: block;
+    color: var(--yellow);
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo-form input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #333;
+    border-radius: 6px;
+    background: var(--bg-input);
+    color: var(--text-light);
+    font-size: 16px;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+.campo-form input:focus {
+    border-color: var(--yellow);
+    outline: none;
+}
+
+.btn-participar {
+    background: linear-gradient(135deg, var(--red), #ff0000);
+    color: var(--text-light);
+    border: 2px solid var(--yellow);
+    padding: 15px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+    animation: pulseCombined 1.5s infinite;
+}
+
+.btn-participar:hover {
+    background: linear-gradient(135deg, var(--red-dark), var(--red));
+    transform: translateY(-2px);
+}
+
+.btn-participar:disabled {
+    background: #666;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.loading {
+    text-align: center;
+    padding: 10px;
+    color: var(--yellow);
+}
+
+.info-cadastro {
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* =========================
+   DADOS DO USUÁRIO
+========================= */
+.dados-usuario {
+    padding: 20px;
+}
+
+.dados-usuario h2 {
+    color: var(--yellow);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.dado-item {
+    margin-bottom: 12px;
+    padding: 12px;
+    background: var(--bg-input);
+    border-radius: 6px;
+    border-left: 4px solid var(--red);
+}
+
+.dado-item label {
+    font-weight: bold;
+    color: var(--yellow);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.alterar-dados {
+    text-align: center;
+    margin-top: 15px;
+    color: var(--text-muted);
+}
+
+.alterar-dados a {
+    color: var(--yellow);
+}
+
+/* =========================
+   STATUS INSCRIÇÃO
+========================= */
+.status-inscricao {
+    padding: 0 20px;
+}
+
+.confirmacao {
+    background: #1a3a1a;
+    border: 2px solid var(--success);
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+}
+
+.confirmacao h3 {
+    color: var(--success);
+    margin-bottom: 8px;
+}
+
+/* =========================
+   INSTRUÇÕES
+========================= */
+.instrucoes {
+    padding: 20px;
+}
+
+.alerta {
+    background: var(--alert-bg);
+    border: 2px solid var(--yellow);
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+}
+
+.alerta h4 {
+    color: var(--yellow);
+    margin-bottom: 8px;
+}
+
+/* =========================
+   BOTÃO LIVE
+========================= */
+.acao {
+    padding: 20px;
+}
+
+.btn-live {
+    background: var(--red);
+    color: var(--text-light);
+    border: 2px solid var(--yellow);
+    padding: 15px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    animation: pulseLive 1.5s infinite;
+    transition: all 0.3s;
+}
+
+.btn-live:hover {
+    background: var(--red-dark);
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+@media (max-width: 768px) {
+    .banner-img { height: 150px; object-fit: cover; }
+    .header h1 { font-size: 22px; }
+    .header h2 { font-size: 18px; }
+    .container { margin: 10px; border-radius: 10px; }
+    body { padding: 10px; }
+}
+
